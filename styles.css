@@ -1,33 +1,131 @@
 /* style.css */
-/* ... (previous body, header styles) ... */
 
+/* Basic Reset & Defaults */
+* { /* Apply to all elements */
+    box-sizing: border-box; /* Makes padding/border included in width/height */
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; /* Common system font stack */
+    line-height: 1.6;
+    background-color: #f4f4f9; /* Light grey background */
+    color: #333; /* Default text color */
+    margin: 0; /* Remove default body margin */
+}
+
+/* Centered Content Container */
+main {
+    max-width: 900px; /* Limit content width */
+    margin: 2em auto; /* Center the main block (top/bottom margin 2em, left/right auto) */
+    padding: 2em; /* Add space inside the container */
+    background-color: #ffffff; /* White background for content */
+    border-radius: 8px; /* Slightly rounded corners */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Subtle shadow */
+}
+
+/* Header Styling */
+header {
+    text-align: center;
+    padding: 2em 1em;
+    background-color: #eee; /* Light background for header */
+    border-bottom: 1px solid #ddd;
+}
+
+header h1 {
+    margin-bottom: 0.5em;
+    color: #222;
+}
+
+header p { /* Style the paragraph holding badges */
+    margin-bottom: 1em;
+}
+
+/* Navigation Styling */
 nav ul {
-  list-style: none;
-  padding: 0;
-  text-align: center;
-  background-color: #eee;
-  margin-bottom: 1em;
+    list-style: none; /* Remove default bullets */
+    padding: 0.5em 0;
+    text-align: center;
+    background-color: #e9e9e9; /* Slightly different shade for nav */
 }
+
 nav ul li {
-  display: inline-block;
-  margin: 0.5em 1em;
+    display: inline-block; /* Make links appear side-by-side */
+    margin: 0 1em; /* Add space between nav links */
 }
+
 nav ul li a {
-  text-decoration: none;
-  color: #337ab7;
+    text-decoration: none;
+    color: #0077cc; /* Link color */
+    font-weight: bold;
+}
+nav ul li a:hover {
+    text-decoration: underline;
 }
 
+/* Section Spacing */
 section {
-  margin-bottom: 2em;
+    margin-bottom: 2.5em; /* Space between sections (About, Tech, Stats, etc.) */
 }
 
+/* Headings */
+h2 {
+    margin-bottom: 0.75em;
+    color: #333;
+    border-bottom: 1px solid #eee; /* Subtle line under section headings */
+    padding-bottom: 0.25em;
+}
+
+h3 {
+    margin-bottom: 0.5em;
+    color: #444;
+}
+
+/* Tech Stack Lists */
+#tech-stack ul {
+    list-style: none; /* Remove bullets if desired */
+    padding-left: 0; /* Remove default indent */
+    margin-bottom: 1em;
+}
+#tech-stack li {
+     margin-bottom: 0.3em;
+}
+
+
+/* Project Listings (Basic) */
 .project {
-  border: 1px solid #ddd;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-radius: 5px;
-  background-color: #fdfdfd;
+    border: 1px solid #e0e0e0;
+    padding: 1.5em;
+    margin-bottom: 1.5em;
+    border-radius: 5px;
+    background-color: #fdfdfd;
 }
 .project h3 {
-  margin-top: 0;
+    margin-top: 0;
+    color: #0056b3;
+}
+.project p {
+    margin-bottom: 0.5em;
+}
+
+
+/* GitHub Stats Images */
+#github-stats img {
+    max-width: 100%; /* Ensure images scale down on smaller screens */
+    display: block; /* Make images block elements for centering */
+    margin: 1em auto; /* Center images */
+}
+
+/* Footer Styling */
+footer {
+    margin-top: 3em;
+    text-align: center;
+    font-size: 0.9em;
+    color: #666;
+    border-top: 1px solid #eee;
+    padding-top: 1.5em;
+}
+footer img { /* Style the profile views counter if needed */
+    vertical-align: middle;
 }
