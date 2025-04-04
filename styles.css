@@ -1,6 +1,33 @@
 /* style.css */
-body {
-    font-family: sans-serif;
-    line-height: 1.6;
-    margin: 2em;
+/* ... (previous body, header styles) ... */
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+  background-color: #eee;
+  margin-bottom: 1em;
+}
+nav ul li {
+  display: inline-block;
+  margin: 0.5em 1em;
+}
+nav ul li a {
+  text-decoration: none;
+  color: #337ab7;
+}
+
+section {
+  margin-bottom: 2em;
+}
+
+.project {
+  border: 1px solid #ddd;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-radius: 5px;
+  background-color: #fdfdfd;
+}
+.project h3 {
+  margin-top: 0;
 }
