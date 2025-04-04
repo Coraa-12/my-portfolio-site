@@ -1,4 +1,4 @@
-/* style.css */
+/* style.css - Adapting 'Serial Programmer' Inspiration */
 
 /* Basic Reset & Defaults */
 * {
@@ -8,142 +8,149 @@
 }
 
 body {
-    /* Using a common, clean system font stack */
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    line-height: 1.7; /* Increase line spacing slightly */
-    background-color: #f8f9fa; /* Very light gray background */
-    color: #212529; /* Darker gray text for better contrast */
+    line-height: 1.6;
+    background-color: #1a1a1a; /* Dark background */
+    color: #ccc; /* Light gray text */
     margin: 0;
 }
 
-/* Centered Content Container */
-main {
-    max-width: 800px; /* Slightly narrower maybe */
-    margin: 3em auto; /* Increase top/bottom margin, keep centered */
-    padding: 3em; /* Increase internal padding */
-    background-color: #ffffff;
-    border-radius: 5px; /* Keep subtle rounding */
-    /* Consider removing shadow for flatter look, or make it lighter */
-    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+/* Centered Content Container (Adjust max-width as needed) */
+.container { /* Let's add a wrapper div for more control */
+    max-width: 760px; /* Maybe a bit narrower like the example */
+    margin: 3em auto;
+    padding: 1em; /* Padding for spacing from screen edges */
 }
 
-/* Header & Footer - Keep simple */
-header, footer {
+/* Header Area */
+header {
     text-align: center;
-    padding: 1.5em 1em;
+    padding: 2em 0;
+    border-bottom: 1px solid #333; /* Subtle border in dark theme */
+    margin-bottom: 3em;
 }
 
 header h1 {
+    font-size: 2.5em; /* Larger title */
+    font-weight: 600;
+    color: #eee; /* Brighter color for main title */
     margin-bottom: 0.5em;
-    font-size: 2em; /* Slightly smaller H1 maybe */
-    font-weight: 600; /* Semi-bold */
-    color: #212529;
 }
 
-header p { /* Badges */
-    margin-bottom: 1.5em;
+header p { /* Badges paragraph */
+     margin-bottom: 1em; /* Space below badges */
 }
 
-/* Simplified Navigation */
+
+/* Profile Snippet (Add this structure in index.html if desired) */
+.profile-snippet {
+    text-align: center;
+    margin-bottom: 3em;
+}
+
+.profile-snippet img {
+    width: 100px; /* Adjust size */
+    height: 100px;
+    border-radius: 50%; /* Make image circular */
+    margin-bottom: 1em;
+    border: 2px solid #555;
+}
+
+.profile-snippet p { /* Description below image */
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1em;
+    color: #bbb; /* Slightly dimmer text */
+}
+
+.social-links a { /* Style social links if you add them */
+     margin: 0 0.5em;
+     /* Add icons later if you want */
+}
+
+
+/* Navigation - Simple Text Links */
 nav ul {
     list-style: none;
     padding: 0;
     text-align: center;
-    margin-bottom: 2em; /* Add space below nav */
-    /* Remove background for cleaner look */
-    /* background-color: #e9e9e9; */
+    margin-bottom: 3em;
 }
 
 nav ul li {
     display: inline-block;
-    margin: 0 1.5em; /* More space between links */
+    margin: 0 1.5em;
 }
 
 nav ul li a {
     text-decoration: none;
-    color: #495057; /* Subtler link color */
+    color: #aaa; /* Muted color */
     font-weight: 500;
-    text-transform: uppercase; /* Uppercase nav links */
-    font-size: 0.9em;
-    letter-spacing: 0.05em;
 }
 nav ul li a:hover {
-    color: #007bff; /* Accent color on hover */
-    text-decoration: none;
+    color: #eee; /* Brighter on hover */
 }
 
-/* Section Spacing */
+/* Sections */
 section {
-    margin-bottom: 3em; /* More space between sections */
+    margin-bottom: 3em;
 }
 
-/* Headings - Clean & Clear */
 h2 {
-    font-size: 1.6em;
+    font-size: 1.8em;
     font-weight: 600;
-    margin-bottom: 1em; /* More space below H2 */
-    color: #343a40;
-    border-bottom: none; /* Remove underline for cleaner look */
-    padding-bottom: 0;
-}
-
-h3 {
-    font-size: 1.2em;
-    font-weight: 600;
-    margin-bottom: 0.75em;
-    color: #495057;
-}
-
-/* Paragraphs and Lists */
-p, ul {
     margin-bottom: 1em;
+    color: #eee;
+    border-bottom: 1px solid #444;
+    padding-bottom: 0.3em;
 }
 
-ul { /* Apply to Tech Stack lists etc. */
-    padding-left: 1.5em; /* Add back some indent for readability */
-    list-style: disc; /* Use standard bullets */
-}
-#tech-stack ul { /* Remove bullets specifically for tech stack if preferred */
-    list-style: none;
-    padding-left: 0;
-}
-#tech-stack li {
-     margin-bottom: 0.4em;
-}
-
-
-/* Project Listings - Simplified */
+/* Project Blocks Styling */
 .project {
-    /* Remove background and border for cleaner look */
-    /* border: 1px solid #e0e0e0; */
-    /* background-color: #fdfdfd; */
-    padding: 0; /* Remove padding if no border/bg */
-    margin-bottom: 2.5em; /* Use margin for separation */
-    border-left: 3px solid #e9ecef; /* Add a subtle left border instead */
-    padding-left: 1.5em;
+    background-color: #252525; /* Slightly lighter dark background */
+    border: 1px solid #383838; /* Subtle border */
+    border-radius: 8px; /* Rounded corners */
+    padding: 1.5em;
+    margin-bottom: 1.5em;
 }
 .project h3 {
     margin-top: 0;
-    color: #007bff; /* Use accent color for project titles */
+    color: #eee; /* Bright title */
+    font-size: 1.3em;
+    margin-bottom: 0.5em;
 }
-
-
-/* GitHub Stats Images */
-#github-stats img {
-    max-width: 100%;
-    display: block;
-    margin: 1.5em auto; /* More vertical space */
+.project p {
+    margin-bottom: 0.5em;
+    color: #bbb; /* Dimmer text for description */
+}
+.project a {
+    color: #6c9cff; /* A blue accent color for links */
+    text-decoration: none;
+}
+.project a:hover {
+    text-decoration: underline;
 }
 
 /* Footer */
 footer {
     margin-top: 4em;
+    text-align: center;
     font-size: 0.85em;
-    color: #6c757d; /* Lighter gray */
-    border-top: 1px solid #e9ecef; /* Lighter border */
+    color: #888; /* Dim footer text */
+    border-top: 1px solid #333;
     padding-top: 2em;
 }
 footer img {
-    vertical-align: middle;
-    margin: 0 0.25em; /* Space around views counter */
+    filter: grayscale(50%); /* Optional: make views counter less prominent */
+}
+
+/* Remove styles from main if using .container div */
+main {
+   /* Remove background, padding, shadow etc. if wrapping content in <div class="container"> */
+   background-color: transparent;
+   box-shadow: none;
+   padding: 0;
+   max-width: none; /* Let container handle width */
+   margin: 0; /* Let container handle margin */
 }
